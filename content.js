@@ -61,7 +61,13 @@ window.PORTFOLIO_DATA = {
       "detail": "보고서 작성 및 발표"
     }
   ],
-  "exhibitions": [],
+  "exhibitions": [
+    {
+      "year": "2025",
+      "title": "IAP International Art Exhibition 2025",
+      "detail": "Le Carrousel du Louvre · Paris, France · 〈싱그러운〉 출품"
+    }
+  ],
   "featured": [
     "inside-out",
     "accumulation",
@@ -237,6 +243,95 @@ window.PORTFOLIO_DATA = {
       "series": "서양화 실험",
       "image": "assets/house.webp",
       "thumbnail": "assets/house-thumb.webp"
+    }
+  ],
+  "exhibitionIntro": "작품이 전시장을 만나고 관람객과 마주하는 순간. 〈싱그러운〉이 소개된 IAP 2025의 전경과 자료를 기록합니다.",
+  "exhibitionGallery": [
+    {
+      "id": "installation-wide",
+      "year": "2025",
+      "label": "INSTALLATION VIEW",
+      "title": "전시 공간 전경",
+      "caption": "IAP International Art Exhibition 2025 · 작품들이 전시된 공간의 모습",
+      "image": "assets/exhibition-overview.webp",
+      "alt": "여러 미술 작품이 걸린 루브르 전시 공간을 관람객이 둘러보는 장면"
+    },
+    {
+      "id": "installation-wall",
+      "year": "2025",
+      "label": "INSTALLATION VIEW",
+      "title": "전시 벽면과 관람객",
+      "caption": "Le Carrousel du Louvre · 전시 공간과 관람 장면",
+      "image": "assets/exhibition-installation-01.webp",
+      "alt": "여러 작품이 걸린 전시장 벽면 앞에서 관람하는 사람들"
+    },
+    {
+      "id": "installation-visitors",
+      "year": "2025",
+      "label": "INSTALLATION VIEW",
+      "title": "전시 관람 풍경",
+      "caption": "Le Carrousel du Louvre · 전시 설치 전경",
+      "image": "assets/exhibition-installation-02.webp",
+      "alt": "갤러리 전시 공간에서 작품을 감상하는 관람객"
+    },
+    {
+      "id": "backdrop",
+      "year": "2025",
+      "label": "EXHIBITION",
+      "title": "IAP 2025 공식 행사 현장",
+      "caption": "IAP International Art Exhibition 2025 · Le Carrousel du Louvre 현장 배경막",
+      "image": "assets/exhibition-backdrop.webp",
+      "alt": "IAP International Art Exhibition 2025 Le Carrousel du Louvre 행사 배경막"
+    },
+    {
+      "id": "art-detail",
+      "year": "2025",
+      "label": "ARTWORK DETAIL",
+      "title": "〈싱그러운〉 출품 작품",
+      "caption": "〈싱그러운〉, 2024, 순지에 채색 · IAP 2025 전시 참여 작품",
+      "image": "assets/freshness.webp",
+      "alt": "2024년 작품 싱그러운의 원본 이미지"
+    },
+    {
+      "id": "certificate",
+      "year": "2025",
+      "label": "DOCUMENTATION",
+      "title": "참가 확인서 및 추천서",
+      "caption": "IAP Louvre International Art Exhibition · 〈싱그러운〉 관련 확인 자료 (2025.02.07 발급)",
+      "image": "assets/exhibition-certificate.webp",
+      "alt": "IAP 2025 참가 확인서와 추천서의 촬영 이미지"
+    },
+    {
+      "id": "award-record",
+      "year": "2024",
+      "label": "AWARD RECORD",
+      "title": "2024 루브르 공모전 기록",
+      "caption": "2024 프랑스 루브르박물관 전시작품 공모전 관련 기록 · 성인부 입선",
+      "image": "assets/exhibition-2024-record.webp",
+      "alt": "2024 글로벌 미술대회 행사 관련 현장 기록 사진"
+    },
+    {
+      "id": "contest-reference",
+      "year": "2024",
+      "label": "ARCHIVE",
+      "title": "2024 공모전 안내 자료",
+      "caption": "2024 프랑스 루브르 박물관 전시 작품 공모전 관련 소개 화면",
+      "image": "assets/exhibition-2024-notice.webp",
+      "alt": "2024 프랑스 루브르 박물관 전시 작품 공모전 관련 안내 화면"
+    }
+  ],
+  "exhibitionVideos": [
+    {
+      "title": "루브르 전시장 주변 영상",
+      "caption": "Le Carrousel du Louvre 인근 기록 · 5초",
+      "poster": "assets/exhibition-backdrop.webp",
+      "src": "assets/exhibition-louvre-short.mp4"
+    },
+    {
+      "title": "IAP 2025 행사 기록 영상",
+      "caption": "IAP International Art Exhibition 2025 행사 영상 · 약 3분",
+      "poster": "assets/exhibition-backdrop.webp",
+      "src": "assets/exhibition-event-highlights.mp4"
     }
   ]
 };

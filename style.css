@@ -20,3 +20,50 @@
 @media(max-width:480px){.editorial-images{gap:9px}.editorial-images figure img{height:205px}.editorial-images figure{padding:8px 8px 36px}.editorial-images figcaption{font-size:7px;letter-spacing:.4px;left:8px}.editorial-title h2{font-size:28px}}
 
 .journal{margin-top:13px}.journal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}.journal-entry{min-height:105px;border:1px solid var(--edge);background:#f5f5ef;border-radius:9px;padding:17px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s,border .2s}.journal-entry:hover{background:#e6ebe2;border-color:#a4b6a4}.journal-entry span{color:#858d81;font-size:10px;letter-spacing:.4px}.journal-entry span:last-child{align-self:flex-end;color:var(--accent)}.journal-entry strong{font:500 17px var(--serif)}@media(max-width:780px){.journal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.journal-grid{grid-template-columns:1fr}.journal-entry{min-height:90px}}
+
+/* EDITORIAL EXHIBITION ARCHIVE — full-frame exhibition documentation */
+.exhibit-section{margin-top:15px;display:grid;gap:13px;scroll-margin-top:88px}
+.exhibit-main{padding:29px 30px 18px;overflow:hidden;background:#f7f7f2}
+.exhibit-heading{border-bottom:1px solid var(--edge);padding-bottom:14px;margin-bottom:20px}
+.exhibit-heading h2{font:500 clamp(24px,2.5vw,31px) var(--serif);margin-top:6px}
+.exhibit-stamp{font-size:10px;color:#859184;letter-spacing:2px}
+.exhibit-intro{display:grid;grid-template-columns:1fr .75fr;align-items:end;gap:34px;margin:0 0 24px}
+.exhibit-intro .exhibit-year{display:block;font-size:11px;letter-spacing:2px;color:#7d9180;margin-bottom:7px}
+.exhibit-intro h3{font:500 clamp(27px,3.15vw,44px)/1.22 var(--serif);letter-spacing:-1.4px;margin:0 0 15px}
+.exhibit-venue{font-size:10px;letter-spacing:1.4px;line-height:1.9;color:var(--accent)}
+.exhibit-venue span{margin-left:10px}
+.exhibit-intro p{font-size:13px;line-height:2.1;color:#70766c;max-width:440px;margin:0;padding-bottom:4px;word-break:keep-all}
+.exhibit-mosaic{display:grid;grid-template-columns:1.45fr 1fr 1fr;gap:11px}
+.exhibit-photo-feature,.exhibit-photo-card{cursor:zoom-in;text-align:left;border:1px solid #d9ddd4;border-radius:10px;display:block;overflow:hidden;min-width:0;padding:0;background:#fff;color:var(--text);transition:transform .25s,border-color .25s,box-shadow .25s}
+.exhibit-photo-feature:hover,.exhibit-photo-card:hover{transform:translateY(-3px);border-color:#9bad9c;box-shadow:0 10px 28px #43524616}
+.exhibit-photo-feature img{display:block;width:100%;height:270px;object-fit:cover;background:#e8e8e3}
+.exhibit-photo-feature:first-child img{object-position:center}
+.exhibit-photo-foot{display:grid;gap:5px;padding:13px 15px 15px}
+.exhibit-photo-foot small{color:#849083;font-size:9px;letter-spacing:1.2px;text-transform:uppercase}
+.exhibit-photo-foot strong{font-size:12px;font-weight:600;display:flex;justify-content:space-between;gap:10px;line-height:1.55}
+.exhibit-photo-foot strong i{font-size:14px;color:#667a69;font-style:normal}
+.exhibit-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:15px;color:#8b968a;font-size:11px}
+.exhibit-archive{background:#f8f8f4}
+.exhibit-gallery-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px;margin-top:19px}
+.exhibit-photo-card img{height:150px;width:100%;object-fit:cover;display:block;background:#edece7}
+.exhibit-photo-card .exhibit-photo-foot{padding:12px 10px 14px;min-height:87px}
+.exhibit-photo-card .exhibit-photo-foot strong{font-size:11px}
+.exhibit-video-section{background:#f5f6f1}
+.exhibit-videos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.exhibit-video-card{margin:0;border:1px solid var(--edge);border-radius:10px;padding:12px;background:white}
+.exhibit-video-card video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#111;border-radius:5px}
+.exhibit-video-card figcaption{padding:11px 2px 1px;display:flex;gap:6px;flex-direction:column}
+.exhibit-video-card figcaption strong{font-size:12px}.exhibit-video-card figcaption span{font-size:11px;color:#8b968a}
+.exhibit-modal{width:min(1110px,95vw);max-height:95vh;padding:0;border:0;border-radius:12px;background:#fafaf5;box-shadow:0 32px 90px #0006;color:var(--text)}
+.exhibit-modal::backdrop{background:#151c16c9;backdrop-filter:blur(5px)}
+.exhibit-lightbox{padding:20px;display:flex;flex-direction:column;max-height:93vh}
+.exhibit-lightbox-head,.exhibit-lightbox-foot{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.exhibit-lightbox-head strong{display:block;font:500 20px var(--serif);margin-top:5px}
+.exhibit-lightbox-head button{background:white;border:1px solid var(--edge);width:38px;height:38px;border-radius:50%;cursor:pointer}
+.exhibit-lightbox-photo{flex:1;min-height:0;display:grid;place-items:center;background:#ecece7;border-radius:7px;margin:14px 0;overflow:hidden}
+.exhibit-lightbox-photo img{max-width:100%;max-height:min(70vh,760px);object-fit:contain;display:block}
+.exhibit-lightbox-foot p{font-size:12px;line-height:1.7;color:#737d73;max-width:70%;margin:0}
+.exhibit-lightbox-foot div{display:flex;gap:15px;align-items:center;font-size:11px;color:#858d85}
+.exhibit-lightbox-foot button{background:white;border:1px solid var(--edge);padding:7px 12px;border-radius:6px;cursor:pointer}
+@media(max-width:900px){.exhibit-mosaic{grid-template-columns:1fr 1fr}.exhibit-mosaic .exhibit-photo-feature:first-child{grid-column:1/-1}.exhibit-photo-feature:first-child img{height:300px}.exhibit-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.exhibit-main{padding:20px 15px}.exhibit-stamp{display:none}.exhibit-intro{grid-template-columns:1fr;gap:10px}.exhibit-mosaic{gap:9px}.exhibit-photo-feature img{height:160px}.exhibit-mosaic .exhibit-photo-feature:first-child img{height:220px}.exhibit-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.exhibit-photo-card img{height:145px}.exhibit-videos{grid-template-columns:1fr}.exhibit-footer{align-items:start;flex-direction:column}.exhibit-lightbox{padding:12px}.exhibit-lightbox-foot{align-items:flex-start;flex-direction:column}.exhibit-lightbox-foot p{max-width:100%}}

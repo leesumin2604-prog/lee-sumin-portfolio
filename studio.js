@@ -23,6 +23,20 @@ function save(){localStorage.setItem('lindo-preview',JSON.stringify(data));msg('
 $('save-local').onclick=save;
 $('preview').onclick=()=>{save();window.open('index.html?preview=1','_blank','noopener')};
 $('download').onclick=()=>{save();const contents='window.PORTFOLIO_DATA = '+JSON.stringify(data,null,2)+';\n';const url=URL.createObjectURL(new Blob([contents],{type:'text/javascript;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='content.js';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2500);msg('content.js를 다운로드했어요. GitHub에 교체 업로드하면 공개됩니다.')};
-$('reset').onclick=()=>{if(!confirm('임시 편집 내용을 모두 지우고 처음 상태로 되돌릴까요?'))return;data=structuredClone(base);localStorage.removeItem('lindo-preview');current=0;fields();drawWork();msg('처음 상태로 되돌렸어요.')};
-fields();drawWork();if(localStorage.getItem('lindo-preview'))msg('이 브라우저의 이전 임시 저장 내용을 불러왔어요.');
+$('reset').onclick=()=>{if(!confirm('임시 편집 내용을 모두 지우고 처음 상태로 되돌릴까요?'))return;data=structuredClone(base);localStorage.removeItem('lindo-preview');current=0;fields();drawWork();exhibitIndex=0;$('exhibit-intro-edit').value=data.exhibitionIntro||'';drawExhibitEditor();msg('처음 상태로 되돌렸어요.')};
+
+// Exhibition gallery editor — captions and file paths remain in content.js.
+let exhibitIndex=0;
+function drawExhibitEditor(){data.exhibitionGallery??=[];const cards=$('exhibit-photo-list');cards.innerHTML=data.exhibitionGallery.map((p,i)=>`<button type="button" data-exchoose="${i}" class="work-list-item ${i===exhibitIndex?'selected':''}"><img src="${safe(p.image)}" alt=""><span><strong>${safe(p.title)}</strong><small>${safe(p.label||'EXHIBITION')}</small></span></button>`).join('');const p=data.exhibitionGallery[exhibitIndex];if(!p){$('exhibit-photo-fields').innerHTML='<p>사진을 추가해 주세요.</p>';return}
+const exfields=[['title','사진 제목'],['caption','설명'],['year','연도'],['label','분류 (영문)'],['image','이미지 경로'],['alt','대체 텍스트']];$('exhibit-photo-fields').innerHTML=`<div class="work-controls"><span class="smallcaps">전시 사진 ${exhibitIndex+1} / ${data.exhibitionGallery.length}</span><button type="button" id="up-exhibit">↑ 위로</button><button type="button" id="down-exhibit">↓ 아래로</button></div><div class="field-grid">${exfields.map(([key,label])=>`<div class="edit-field ${['caption','alt','image'].includes(key)?'wide':''}"><label>${label}</label>${key==='caption'?`<textarea data-exfield="${key}" rows="4">${safe(p[key])}</textarea>`:`<input data-exfield="${key}" value="${safe(p[key])}">`}</div>`).join('')}</div>`;
+$('up-exhibit').onclick=()=>moveExhibit(-1);$('down-exhibit').onclick=()=>moveExhibit(1)}
+function moveExhibit(offset){const t=exhibitIndex+offset;if(t<0||t>=data.exhibitionGallery.length)return;[data.exhibitionGallery[exhibitIndex],data.exhibitionGallery[t]]=[data.exhibitionGallery[t],data.exhibitionGallery[exhibitIndex]];exhibitIndex=t;drawExhibitEditor()}
+$('exhibit-intro-edit').value=data.exhibitionIntro||'';
+$('exhibit-intro-edit').addEventListener('input',e=>data.exhibitionIntro=e.target.value);
+$('exhibit-photo-list').addEventListener('click',e=>{const target=e.target.closest('[data-exchoose]');if(!target)return;exhibitIndex=Number(target.dataset.exchoose);drawExhibitEditor()});
+$('exhibit-photo-fields').addEventListener('input',e=>{const key=e.target.dataset.exfield;if(!key)return;data.exhibitionGallery[exhibitIndex][key]=e.target.value;if(key==='title'){const chosen=$('exhibit-photo-list').querySelectorAll('.work-list-item strong')[exhibitIndex];if(chosen)chosen.textContent=e.target.value}});
+$('add-exhibit').onclick=()=>{data.exhibitionGallery.push({id:'gallery-'+Date.now(),year:String(new Date().getFullYear()),label:'INSTALLATION VIEW',title:'새 전시 사진',caption:'',image:'assets/new-exhibition-photo.jpg',alt:'전시 사진'});exhibitIndex=data.exhibitionGallery.length-1;drawExhibitEditor();msg('사진을 추가했어요. 사진 파일도 assets/ 폴더에 업로드해야 합니다.')};
+$('remove-exhibit').onclick=()=>{if(!data.exhibitionGallery[exhibitIndex]||!confirm('이 전시 사진을 목록에서 제거할까요?'))return;data.exhibitionGallery.splice(exhibitIndex,1);exhibitIndex=Math.max(0,exhibitIndex-1);drawExhibitEditor()};
+
+fields();drawWork();drawExhibitEditor();if(localStorage.getItem('lindo-preview'))msg('이 브라우저의 이전 임시 저장 내용을 불러왔어요.');
 })();

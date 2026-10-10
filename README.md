@@ -64,3 +64,14 @@
 사용자가 직접 제공한 블로그 링크 9개를 홈페이지의 「작업 기록 / JOURNAL」에 연결했습니다. 네이버 외부 페이지의 본문을 검증할 수 없어 실제 게시글 제목을 추정하지 않고 `작업 기록 01~09`로 표시합니다.
 
 홈페이지 브랜드 표기는 `LEE SUMIN`으로 통일했습니다. GitHub 커넥터의 `create_file` API가 여전히 HTTP 403을 반환하여 저장소 자동 업로드는 완료되지 않았습니다.
+
+
+## 2025 Louvre exhibition archive / 전시 기록
+
+The exhibition gallery section includes photographs of the **IAP International Art Exhibition 2025, Le Carrousel du Louvre** and supporting documentation for the exhibited artwork 〈싱그러운〉, plus separate materials relating to the 2024 Louvre competition. Exhibition photographs and event videos were supplied by the artist.
+
+To edit the photos, open `studio.html` → **전시 사진 편집**. Edit titles, captions, year and image path or reorder photos, then click **content.js 다운로드**. Upload the downloaded `content.js` to the repository root on GitHub and commit the changes.
+
+To add photos, first upload images to `assets/`. Reference them as `assets/filename.webp` in the editor. Video references are in the `exhibitionVideos` array of `content.js` and videos live in `assets/`. The studio editor is not authenticated and does not publish automatically; only a GitHub commit updates the public page.
+
+On GitHub, preserve the `assets/` directory in the repository **root**. Do not upload images alone into the root. The files `index.html`, `app.js`, `style.css`, `studio.html`, `studio.js`, `studio.css`, and `content.js` must all remain in the root.
