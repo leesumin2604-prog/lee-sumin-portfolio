@@ -243,6 +243,32 @@ window.PORTFOLIO_DATA = {
       "series": "서양화 실험",
       "image": "assets/house.webp",
       "thumbnail": "assets/house-thumb.webp"
+    },
+    {
+      "id": "new-work-1791630233355",
+      "title": "Four elements",
+      "english": "Four elements",
+      "year": 2025,
+      "medium": "oil on canvas",
+      "size": "53.0x72.7",
+      "series": "",
+      "description": "물, 불, 흙, 공기의 원소들이 이루는 탄생과 죽음에 이르기까지의 과정이다. 이 과정은 아름다운 꽃의 피어남이다. 생명의 탄생과 죽음의 무한의 굴레 속 느껴지는 감정들 또한 그러하다. 모든 생명들이 소중하듯이 모든 감정들은 아름답다. 그 감정들은 서로 얽혀 새로운 색의 조화를 만들어 낸다. ",
+      "category": "western",
+      "image": "assets/Four elements, 2025, oil on canvas, 53.0x72.7.jpg",
+      "thumbnail": "assets/Four elements, 2025, oil on canvas, 53.0x72.7.jpg"
+    },
+    {
+      "id": "new-work-1791630599193",
+      "title": "폭발케이크.미니",
+      "english": "explosioncake.mini",
+      "year": 2026,
+      "medium": "순지에 채색",
+      "size": "45.0x45.0",
+      "series": "mini",
+      "description": "밀집된 재료들이 한순간에 폭발한다. 빈 자리에는 또다시 채워지기 마련이다. ",
+      "category": "korean",
+      "image": "assets/폭발케이크, 2026, 순지에 채색, 45.0x45.0.JPG",
+      "thumbnail": "assets/폭발케이크, 2026, 순지에 채색, 45.0x45.0.JPG"
     }
   ],
   "exhibitionIntro": "작품이 전시장을 만나고 관람객과 마주하는 순간. 〈싱그러운〉이 소개된 IAP 2025의 전경과 자료를 기록합니다.",
